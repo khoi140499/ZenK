@@ -23,12 +23,12 @@ public class CheckConnection {
                 if(ParseUser.getCurrentUser()==null) {
                     setAnimation(context, activity2, ln);
                 }
-                else {
-                    setAnimation(context, activity1, ln);
+                else if(ParseUser.getCurrentUser()!=null){
+                    setAnimation(context, context1, ln);
                 }
             }
             else{
-                setAnimation(context, context1, ln);
+                setAnimation(context, activity1, ln);
             }
         });
     }
